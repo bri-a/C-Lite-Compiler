@@ -1,0 +1,17 @@
+int *a[2];
+
+int b(c, d)
+int *c,d;
+{
+    int *h[1], i;
+}
+
+int e()
+{
+}
+
+main()
+{
+	int f;
+	int g[5];
+}

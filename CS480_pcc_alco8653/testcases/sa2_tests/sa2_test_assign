@@ -1,0 +1,56 @@
+int f1()
+{
+	int x[10];
+}
+
+int f2()
+{
+	int b, c;
+	b = 1;
+	c = 9;
+}
+
+int f3()
+{
+	int *a;
+	int b;
+	a = &b;
+}
+
+int f4()
+{
+	int p, *a;
+	p = *a;
+}
+
+int f5()
+{
+	int p, *a;
+	*a = p;
+}
+
+int f6()
+{
+	int x[10];
+	int b, c;
+	x[b] = c;
+}
+
+int f7()
+{
+	int b, c;
+	c = b++;
+}
+
+main()
+{
+	int *a, x[10];
+	int p, b, c;
+	
+	b = 1;
+	c = 9;
+	a = &b;
+	p = *a;
+	x[b] = c;
+	c = b++;
+}

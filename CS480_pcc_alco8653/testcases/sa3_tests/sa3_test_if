@@ -1,0 +1,10 @@
+main ()
+{
+	int x, y;
+	
+	if ( x == 0 && (y = x+1) )
+	{
+		output(x,y);
+	}
+
+}

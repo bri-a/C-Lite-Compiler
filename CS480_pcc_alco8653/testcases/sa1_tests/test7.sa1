@@ -1,0 +1,46 @@
+/* mix */
+
+int x;
+int *xptr;
+int xarray[10];
+int *xptrarray[42];
+
+int foo (z,zptr,zarray,zptrarray)
+
+ int z;
+ int *zptr;
+ int zarray[];
+ int *zptrarray[];
+{
+  
+}
+int bar (az,AZ,ZA,azptr,azarray,azptrarray)
+
+ int az,*AZ,ZA;
+ int *azptr;
+ int azarray[];
+ int *azptrarray[];
+{
+	int X;
+	int XX[100];
+	
+	int x;
+	  
+}
+int boo(a)
+int a;
+{
+}
+main ()
+{
+ int y,Y;
+ int *yptr;
+ int yarray[10];
+ int *yptrarray[42];
+int x;
+int *xptr;
+int xarray[11];
+int *xptrarray[43];
+ 
+  
+}

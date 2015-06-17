@@ -1,0 +1,15 @@
+int foo ()
+{
+	int *pA;
+	int data = 9;
+	
+	pA = &data;
+	
+	*pA = 6;
+	
+	output (*pA);
+}
+
+main()
+{
+}

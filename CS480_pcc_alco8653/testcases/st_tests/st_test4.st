@@ -1,0 +1,12 @@
+P
+S if
+A aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafirstidaaaaaaaaaaaaaaaaaaD
+S aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafirstidaaaaaaaaaaaaaaaaaaD
+S bob
+A bob
+A bob
+S bob
+P
+D
+D
+P

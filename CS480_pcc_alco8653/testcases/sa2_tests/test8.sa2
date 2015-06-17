@@ -1,0 +1,60 @@
+/* errors */
+
+int foo(param1, param2)
+int param1, param2;
+{
+
+	int y;
+	int y; /* duplicate variable */
+	int *y; /* duplicate variable */
+	int y[8]; /* duplicate variable */
+	
+	x = param1 + param2; /* x does not exist */
+}
+
+int foo(param1, param2) /* redeclaration! */
+int param1, param2;
+{
+
+}
+
+main()
+{
+
+	int array[2] = {1};
+	int secondArray[2] = {1,2,3};
+	int thirdArray[2] = {1+2,3};
+	
+	int y = 9;
+	int z = 19;
+	
+	y = x + 1; /* x is missing */
+
+	y = z >> 1; /* no bit shifts! */
+	
+	y = 2;
+	
+	y(8,2); /* y is not a function */
+
+	y = 2;
+		
+	output(y[0]); /* y is not an array */
+	output(4[0]); /* 4 is not an array */
+	
+	y = 3;
+	
+	(y+1) ++; /* bad lvalue*/
+	
+	$ y++;
+	
+	y+1 ++; /* bad lvalue*/
+	y++;
+	1++; /* bad lvalue*/
+		
+	&(1);
+	
+	*1 = 9; /* sa2: LVALUE EXPECTED sa3: Dereference Type Mismatch */
+	
+	4 = 2; 
+	
+}

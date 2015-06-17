@@ -1,0 +1,18 @@
+main ()
+{
+	int i = 0;
+	int max = 100;
+	
+	for ( i = 0; i < max; i++)
+	{
+		if (i % 3 == 1 || i % 4 == 0)
+		{
+			output(i*i);
+		}
+		else
+		{
+			output(i+i);
+		}
+	}
+
+}

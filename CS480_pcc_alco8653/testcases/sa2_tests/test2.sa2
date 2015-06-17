@@ -1,0 +1,148 @@
+/* test operators */
+main()
+{
+	
+	int total = 0;
+	int x , y;
+	
+	x = 8;
+	y = 4;
+	
+	total = x;
+	
+	output(total, 8);
+	
+	total = x + y;
+	
+	output(total, 12);
+	
+	total = x - y;
+	
+	output(total, 4);
+	
+	total = x / y;
+	
+	output(total, 2);
+	
+	total = x * y;
+	
+	output(total, 32);
+	
+	total = x % y;
+	
+	output(total, 0);
+		
+	total = x > y;
+	
+	output(total, 1);
+
+	total = x >= y;
+	
+	output(total, 1);
+	
+	total = x < y;
+	
+	output(total, 0);
+	
+	total = x <= y;
+	
+	output(total, 0);
+	
+	total = x == y;
+	
+	output(total, 0);
+	
+	total = x != y;
+	
+	output(total, 1);
+	
+	total = 0 || 1;
+	
+	output(total, 1);
+	
+	total = 1 && 1;
+	
+	output(total, 1);
+	
+	total = -x;
+	
+	output(total, -8);
+
+	total = - - x;
+	
+	output(total, 8);
+	
+	total = -(-(-x));
+	
+	output(total, -8); 
+	
+	x=8; /* just in case x got mangled above */
+	
+	total = 1;
+	
+	total ++;
+	output(total, 2);
+	
+	total --;
+	
+	output(total, 1);
+	
+	/* more complicated expressions */
+	
+	total = x + y * 8 - 4 / y; 
+	
+	output(total, 39);
+	
+	total = (x + y) * 8 - 4 / y; 
+	
+	output(total, 95); 
+	
+	total = x + ((y * 8) - 4) / y; 
+	
+	output(total, 15);
+	
+	total = (x + ((y * 8) - 4) / y); 
+	
+	output(total, 15);
+	
+	total = x > 1 || y < 1 && x < 100; 
+	
+	output(total, 1);
+
+	total = (x > 1 || y < 1) && x < 100; 
+	
+	output(total, 1);
+	
+	total = ( x < 1 || y ) < 1 && x < 100; 
+	
+	output( 0,     0,     0,    -1,     1,     9,    42);
+	output(total, total, total, -1, 1, 9, 42);
+	
+	total  = 9;
+	
+	total ++;
+	
+	output(total++, 10);
+	
+	output(total, 11);
+	
+	total = 9;
+	
+	total = total + 1 + 2 - 4 * 8 + -9 / 6 + 8 + 8 * 2  + - 2 * (4 + 3 + 2 - 0 - 1 + 100)/ 2;
+	output(total, -105);
+	total = 1;
+	x = 1;
+	output(total, x, 1, 1); /* 1 1 */
+	total = x + x++;
+	output(total, x, 2, 2); /* 2 2 */
+	total = x + (x++);
+	output(total, x, 4, 3); /* 4 3 */
+	
+	total  = x++;
+	output(total, x, 3 ,4); /* 3 4 */
+	
+	total  = x--;
+	output(total, x, 4, 3); /* 4 3 */
+	
+}
+	

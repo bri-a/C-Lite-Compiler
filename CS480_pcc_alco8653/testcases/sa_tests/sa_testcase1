@@ -1,0 +1,11 @@
+int e()
+{
+	int x,y;
+	int z = x + y;
+}
+
+main()
+{
+	int f;
+	int g[5];
+}

@@ -1,0 +1,53 @@
+int foo(a,b,c)
+int a, b, c;
+{
+	output (a, b, c);
+}
+
+main ()
+{
+	int x = 2;
+	int y = 3;
+	int z;
+	
+	z = x ++ + y++;
+	/* x = 3, y = 4, z = 5 */
+	output (x, y, z);
+	
+	x = 1;
+	
+	z = x ++ + x ++;
+	
+	/* x = 3, z = 2 */
+	output (x, z);
+	
+	x = 1;
+	
+	/* UNDEFINED */
+	/* 1 1 1 or 1 2 3 */
+	output (x++, x++, x++);
+	
+	/* x = 4 */
+	output (x);
+	
+	x = 1;
+	y = 2;
+	
+	z = x++ > y;
+	
+	/* x = 2, y = 2, z = 0 */
+	output (x, y, z);
+	
+	z = x = y = 1;
+	/* x = 1, y = 1, z = 1 */
+	output (x, y, z);
+	
+	x = 1;
+	foo (x, x++, y); /* output 1 1 1 */
+	
+	/* x = 2 */
+	output (x);
+	
+
+
+}

@@ -1,0 +1,95 @@
+int functionerror(here)
+int here;
+int extraParam; /* mismatched params */
+{
+}
+
+int functionerror2(missingParam,here)
+int here;  /* mismatched params */
+{
+}
+
+int functionDupeParams(param, param, paramNotDup)
+int param;
+int param;  /* duplicate identifier */
+int paramNotDup;
+{}
+
+int functionerror3(order, is, important)
+int important, order, is; /* mismatched params */
+{
+}
+
+
+
+int duplicateVariable;
+int duplicateVariable; /* duplicate identifier */
+
+int anotherDuplicateVariable, anotherDuplicateVariable; /* duplicate identifier */
+
+int test, testArray[2], *pTest, *pTestArray[1];
+int test2			/* missing semicolon */
+int testArray2[2];
+int *pTest2;
+int *pTestArray[3]; /* duplicate identifier */
+int invalidArraySize[1+9]; /* missing right bracket OR const expected */
+int ok;
+int invalidArraySize[1+9; /* missing right bracket OR const expected */
+int *ok2;
+int invalidArraySize[1; /* missing right bracket OR const expected */
+int *ok3[1];
+int invalidArraySize[3];
+int **HANDLE; /* identifier expected */
+
+int function1 (arg1, arg2)
+   int arg1;
+   int *arg2;
+   int arg3[]; /* mismatched params */
+{
+	int localVar;
+	int *pLocalVar;
+}
+
+int function2 (arg3, arg4)
+	int *arg3[]; /* mismatched params */
+{
+	int locVarArray[3];
+	int *pLocVarArray[1];
+}
+
+int function3 (arg1, arg2)
+	int *arg1[];
+	int *arg3[]; /* mismatched params */
+{
+	int locVarArray[3];
+	int *pLocVarArray[1];
+}
+
+int function1(x)  /* duplicate identifier */
+int x;
+{
+}
+
+int willBeFunctionLater;
+int willBeFunctionLater(Now, Is, Function) /* duplicate identifier */
+int Now, Is, Function;
+{
+}
+
+
+main()
+{
+   int error /*missing semicolon */
+   int anotherVar;
+   int invalidArraySize[-9]; /* constant expected */
+   int anotherVar;
+   int anotherVar[1]; /* duplicate identifier */
+   int *anotherVar[1]; /* duplicate identifier */
+   int *anotherVar; /* duplicate identifier */
+   int x,x, a,a,a, /* duplicate identifier */
+   y,y, /* duplicate identifier */
+   z;
+   int function2;
+}
+
+int x; /* extra tokens */

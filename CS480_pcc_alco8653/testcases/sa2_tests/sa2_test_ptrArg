@@ -1,0 +1,25 @@
+int foo (b,c)
+int b;
+int *c;
+{
+	*c = b;
+	/*return c;*/
+}
+
+main ()
+{
+	int x;
+	int *c;
+	int b[3];
+	c = &x;
+	
+	b[0] = 9;
+	b[1] = b[0];
+	
+	/*
+	foo (b[1], c);
+	
+	output (*c, x);
+	output (c);
+	*/
+}

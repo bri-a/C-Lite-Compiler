@@ -1,0 +1,17 @@
+int a;
+
+int b(c,d)
+int c,d;
+{
+	int h,i;
+}
+
+int e()
+{
+}
+
+main()
+{
+	int f;
+	int g[5];
+}

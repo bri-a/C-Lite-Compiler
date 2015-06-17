@@ -1,0 +1,23 @@
+int a;
+int g[5],f[7];
+
+int foo1()
+{
+    int h[6],z;
+    int j;
+}
+
+int foo2(a,b,c,d)
+int a;
+int b[];
+int *c,*d;
+{
+    int h[6], z[3];
+   
+}
+
+main()
+{
+    int j,k;
+    int z[10];
+}

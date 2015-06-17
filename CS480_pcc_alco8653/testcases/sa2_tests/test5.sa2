@@ -1,0 +1,71 @@
+/* arrays */
+
+int giveMeASingleInt(i)
+int i;
+{
+	output(i);
+	
+	/*return i;*/
+}
+	
+int foo(array)
+int array[];
+{
+
+	output(array[0]);
+	output(array[1]);
+	output(array[2]);
+
+	array[3] = 9;
+	
+	output(array[0] + array[1]);
+	/*return array[0] + array[1];*/
+}
+
+main()
+{
+
+	int intArray[4];
+	int *ptr;
+	
+	int intArrayWithValues[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	
+	{
+	  intArray[0] = 0;
+	  intArray[1] = 2;
+	  intArray[2] = 4;
+	  intArray[2]--;
+	}
+	
+	intArray[3]= intArrayWithValues[8]; 
+	
+	/*output*/foo(intArray) ;
+	
+	output(0, 2, 3, 2);
+	
+	output(intArray[3]);
+	output(9);
+	
+	/*output*/foo(intArrayWithValues) ;
+	output(0, 1, 2, 1);
+	
+	intArray[0] = intArray[1] + intArrayWithValues[2];
+	intArray[1] = intArray[8] - intArrayWithValues[4];
+	intArray[2] = intArray[1] - intArrayWithValues[4]++;
+	intArray[1 + intArrayWithValues[0]] = intArray[intArrayWithValues[intArrayWithValues[intArrayWithValues[1]]]] ; 
+  
+	/*output*/foo(intArray);
+	output(4, -2, -6, 2);
+	
+	/*output*/foo(intArrayWithValues);
+	output(0, 1, 2, 1);
+	
+	/*output*/ giveMeASingleInt(intArrayWithValues[1]);
+	output(1);
+	ptr = &(intArray[0]);
+	output(*ptr);
+	output(4);
+	ptr = &(intArray[3]);
+	output(*ptr);
+	output(9);
+}

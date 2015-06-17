@@ -1,0 +1,22 @@
+/* arrays */
+
+int bar(aParam1)
+int aParam1[];
+{
+	
+}
+
+
+int foo(aParam1, aParam2)
+int aParam1[], aParam2[];
+{
+	int  lArray[2];
+	int lArray2[3], lArray3[4];
+}
+
+main()
+{
+	int mainArray[11];
+	int array[10];
+	
+}

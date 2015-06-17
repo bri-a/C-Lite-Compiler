@@ -1,0 +1,8 @@
+main()
+{
+	int a;
+	
+	a = 100;
+	a = a+1;
+	output (a);
+}

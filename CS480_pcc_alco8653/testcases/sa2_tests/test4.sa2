@@ -1,0 +1,78 @@
+/* function calls */
+
+int bar(valueOne, valueTwo)
+int valueOne;
+int valueTwo;
+
+{
+  output(valueOne - valueTwo);
+	/*return valueOne - valueTwo;*/
+}
+
+int foo(valueOne, valueTwo)
+int valueOne, valueTwo;
+{
+	
+	bar(valueOne, valueTwo);
+	output(valueOne);
+	/*return valueOne + bar(valueOne, valueTwo);*/
+}
+
+int testShortCircuit(dummy)
+int dummy;
+{
+	output(0,0,0,0,0,0,0,0,0,0);
+}
+
+main()
+{
+
+	int x;
+	int y;
+	
+	x = 9;
+	y = 1;
+	
+	foo(1,2);
+	output(-1, 1);
+
+	foo(x,y);
+	output(8, 9);
+	
+	foo(y,((((x)))));
+	output(-8, 1);
+
+	foo(x--,y++);
+	output(8, 9);
+	output(x,y); 
+	output(8, 2);
+
+	foo(x,y);
+	output(6, 8);
+	
+	foo(3,-x);
+	output(11, 3);
+	
+	foo(-y,- -x);
+	output(-10, -2);
+	
+	foo(2, 2+9);
+	output(-9, 2);
+	
+	foo(2+9, 2);
+	output(9, 11); 
+	
+	foo( (2+9), x);
+	output(3, 11);
+
+	foo( (((((2+9)))))+1, 1-(x));
+	output(19, 12);
+		
+	/*output(foo(foo(foo(x,y), foo(y,x)),foo(foo(x,y), foo(y,x)) );
+	
+	output(foo(foo(foo(x--,y++), foo(y,x)), foo(3,-x) - foo(foo(x,y) , foo(1,2) + foo(y,x)) );
+	
+	output(foo(foo(foo(x,y), foo(y,x)),foo(foo(x,y), foo(y,x)) );*/
+	
+	/*x =  (1 || testShortCircuit(1) ) ;*/
+}

@@ -1,0 +1,7 @@
+int c[2] = {1,2};
+
+main()
+{
+	int x = c[0]++;
+	output (x, c[0]);
+}

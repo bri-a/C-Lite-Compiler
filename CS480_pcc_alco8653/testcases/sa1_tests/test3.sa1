@@ -1,0 +1,22 @@
+/* pointers */
+
+
+int bar(pParam1)
+int *pParam1;
+{
+	
+}
+
+int foo(pParam1, pParam2)
+int *pParam1, *pParam2;
+{
+	int  *lPtr;
+	int *lPtr2, *lPtr3;
+}
+
+main()
+{
+	int *mainPtr;
+	int *ptr1;
+	
+}

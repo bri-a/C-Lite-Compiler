@@ -1,0 +1,15 @@
+main()
+{
+	int x = 9;
+	int y = 8;
+	
+	if (x > y)
+	{
+		output (x, y);
+	}
+	else
+	{
+		output (y, x);
+	}
+
+}

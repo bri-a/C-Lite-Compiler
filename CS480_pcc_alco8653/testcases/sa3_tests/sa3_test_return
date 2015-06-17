@@ -1,0 +1,26 @@
+int gCounter;
+
+int callMe (a, b)
+int a;
+int b;
+{
+	int val;
+	
+	val = a + b + gCounter;
+	
+	output(val);
+	gCounter = gCounter + 1;
+	return val;
+}
+
+main ()
+{
+	int A;
+	gCounter = 0;
+	
+	A = 1;
+	
+	A = callMe(A,3);
+	A = callMe(A,3);
+	output(A);
+}

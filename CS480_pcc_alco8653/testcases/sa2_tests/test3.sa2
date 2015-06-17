@@ -1,0 +1,46 @@
+/* mix local and global ints*/
+
+int x , y;
+int value; 
+int total = 80;
+
+int foo(value)
+int value;
+{
+  /* do we get the correct variables here?*/
+	int x, y;
+	x = 9;
+	y = value;
+	
+	output (value + total);
+	
+	/*return value;*/
+}
+
+main()
+{
+	int total = 0;
+
+	value = 100;
+	x = 8;
+	y = 4;
+	
+	foo(total);
+	output(80);
+	
+	total = x;
+	
+	output(total);
+	output(8);
+	
+	total = x + y;
+			
+	output(total);
+	output(12);
+	
+	total = 1;
+		
+	foo(total);
+	output(81);
+}
+	

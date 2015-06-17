@@ -1,0 +1,8 @@
+/*out of memory*/
+int g[1];
+int h[5000];
+int j;
+main ()
+{
+	
+}

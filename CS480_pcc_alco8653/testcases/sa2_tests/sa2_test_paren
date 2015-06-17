@@ -1,0 +1,15 @@
+main ()
+{
+	int b[2] = {1, 2};
+	int x = 1;
+	int z;
+	int *pY = &z;
+	
+	*pY = 100;
+	output (x, (x));
+	output (*pY, (*pY));
+	output (((2)));
+	output (((b[0])));
+	(x) = 2;
+	output (x);
+}

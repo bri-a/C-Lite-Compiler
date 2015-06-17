@@ -1,0 +1,16 @@
+/* pointer arrays */
+
+int foo(ptrArray, ptrArray2)
+int *ptrArray[], ptrArray2[];
+{
+	int *ptrArrayLocal[100];
+	int* ptrArrayLocalTwo[9];
+}
+
+main()
+{
+	int *ptrArrayLocal[100], ptrArraySecond[2];
+	int* ptrArrayLocalTwo[9];
+	
+}
+	

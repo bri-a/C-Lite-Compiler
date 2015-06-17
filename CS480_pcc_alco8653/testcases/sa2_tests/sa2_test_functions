@@ -1,0 +1,74 @@
+int foo (a)
+int a;
+{
+    output (a);
+}
+
+int fooo (a, b, c)
+int a;
+int b;
+int c;
+{
+    int x = 10;
+    output (x + a, x + b, x + c);
+}
+
+int foo1 (a)
+int *a;
+{
+	output (*a);
+	*a = 2 * *a;
+}
+
+int foo2 (a)
+int a[];
+{
+	output (a[0], a[1], a[2], a[3], a[4]);
+}
+
+int foo3 (a)
+int a[];
+{
+	a[0] = 2 * a[0];
+	a[1] = a[0] + a[1];
+	a[2] = a[2] - a[0];
+	a[3] = a[3] - 4;
+	a[4] = 2 * a[0];
+}
+int foo4 (a)
+int *a[];
+{
+	output (*a[0], *a[1], *a[2]);
+}
+
+int foo5 (a)
+int *a[];
+{
+	*a[0] = 2 * *a[0];
+	*a[1] = *a[0] + *a[1];
+	*a[2] = *a[2] - *a[0];
+}
+
+main ()
+{
+	int w[5] = {1, 2, 3, 4, 5};
+	    int x = 2;
+	    int y = 3;
+	    int z = 4;
+	    int *pX = &x, *pY = &y, *pZ = &z;
+	    int *t[3] = {pX, pY, pZ};
+	    
+	    foo (*pX);  	/* 2 */
+	    foo (*pY); /* 3 */
+	    fooo (*pX,*pY,*pZ);     /* 12 13 14 */ 
+	    foo1 (pX); /* 2 */
+	    foo (*pX); /* 4 */
+	    foo1 (pY); /* 3 */
+	    foo (*pY); /* 6 */      
+	    foo2 (w); /* 1 2 3 4 5 */
+	    foo3 (w);
+	    foo2 (w);	/* 2 4 1 0 4 */
+	    foo4 (t);	/* 4 6 4 */
+	    foo5 (t);
+	    foo4 (t);	/* 8 14 -4 */
+}

@@ -1,0 +1,130 @@
+/* pointers */
+
+int value = 42;
+
+
+int foo(ptrToValue, realValue)
+int *ptrToValue;
+int realValue;
+{
+
+	output(*ptrToValue);
+		
+	output(*ptrToValue == realValue);
+	/*return *ptrToValue == realValue;*/
+}
+
+int swap(left, right)
+int *left, *right;
+{
+	int tmp = *left;
+	*left = *right;
+	*right = tmp;
+	
+	output(*right == *left);
+	/*return *right == *left;*/
+}
+
+int noswap(left, right)
+int left, right;
+{
+	int tmp = left;
+	left = right;
+	right = tmp;
+	
+	output(right == left);
+	/*return right == left;*/
+}
+
+int bar (x)
+int x;
+{
+  int t[3]={3,2,1};
+  int *ptrs[3];
+
+	t[2] = x;
+  ptrs[0] = &t[0];
+  ptrs[1] = &t[1];
+  ptrs[2] = &t[2];
+  
+  t[0] = 1024;
+
+  output (*ptrs[0], *ptrs[1], *ptrs[2]);
+
+  /*return 0;*/
+}
+
+
+int givePtrToPtr(ptrToPtr)
+int *ptrToPtr[];
+{
+
+	output(0,0,0,0,0,0,0);
+	output(*(ptrToPtr[0]));
+	*(ptrToPtr[0]) = 1;
+	output(*(ptrToPtr[0]));
+	output(0,0,0,0,0,0,*ptrToPtr[0]);
+	/* return **ptrToPtr; */
+}
+
+int givePtr(ptrToPtr)
+int *ptrToPtr;
+{
+
+	output(*ptrToPtr);
+	*ptrToPtr = 1;
+	output(*ptrToPtr);
+	/*return *ptrToPtr;*/
+}
+
+main()
+{
+
+	int *ptrToValue;
+	int localValue = 99;
+	int x;	
+	ptrToValue = & value;
+	
+	foo(&value, value);
+	output( *ptrToValue, value);
+	
+	localValue = *ptrToValue;
+	
+	output(localValue, *ptrToValue, value); 
+
+	output(value, *ptrToValue, ptrToValue);	
+	/* *ptrToValue ++;   */
+	value++;
+	output(value, *ptrToValue, ptrToValue);	
+	output(localValue, *ptrToValue, value); /*5*/
+	
+	*ptrToValue = *ptrToValue + value -  localValue;
+	
+	output(localValue, *ptrToValue, value); 
+	
+	*ptrToValue = *ptrToValue + *ptrToValue + localValue ++;
+	
+	output(localValue, *ptrToValue, value);
+	
+	swap(ptrToValue, &localValue);
+	
+	output(*ptrToValue, localValue);
+	
+	noswap(ptrToValue, localValue);
+	
+	output(*ptrToValue, localValue);
+
+	noswap(*ptrToValue, localValue);
+	
+	output(*ptrToValue, localValue); 
+	
+	bar(1); /* 14 */
+	
+	value = 101;
+	*ptrToValue = 100; 
+	output(*ptrToValue, value, localValue); /* 15 */
+	
+	/*x=	*/givePtrToPtr(&ptrToValue);
+	/*output(x)	;*/
+	output(*ptrToValue, value, localValue);
+}

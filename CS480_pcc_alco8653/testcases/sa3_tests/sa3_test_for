@@ -1,0 +1,11 @@
+main ()
+{
+	int i = 0;
+	int max = 100;
+	
+	for ( i = 0; i < max; i++)
+	{
+		output(i);
+	}
+
+}

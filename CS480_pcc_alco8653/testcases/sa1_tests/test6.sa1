@@ -1,0 +1,20 @@
+/* globals */
+
+int a;
+int array[10];
+int *ptr;
+
+int aInt7, aArray7[9], *aPtr7, *aPtrArray7[7];
+
+int a2, a3;
+int array2[10], array3[11];
+int *ptr2, *ptr3;
+
+int a21, a31, a41;
+
+int *ptrArray[10];
+int *ptrArray2[10], *ptrArray3[11];
+
+main()
+{
+}

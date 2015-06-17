@@ -1,0 +1,16 @@
+int f6()
+{
+	int x[10];
+	int b, c;
+	x[b] = c;
+}
+
+int f7()
+{
+	int b, c;
+	c = b++;
+}
+
+main()
+{
+}

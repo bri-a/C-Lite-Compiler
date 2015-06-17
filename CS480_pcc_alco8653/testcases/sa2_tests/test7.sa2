@@ -1,0 +1,98 @@
+int random = 1;
+int MAXINT = 32000;
+int a = 2113, c = 53, m=1000000;
+
+int srand(seed)
+int seed;
+{
+	random = (a * seed + c ) % m;
+	random = random  % MAXINT;
+}
+
+int rand(seed)
+int seed;
+{
+	random = (a * random + c ) % m;
+	random = random  % MAXINT;
+
+	/*return random;*/
+}
+
+int move(board, x, y, player)
+int board[], x, y;
+int player;
+{
+	board[x*3+y] = player;
+}
+
+int printB(board)
+int board[];
+{
+
+	int i = 0;
+	
+	output(board[i+0], board[i+1], board[i+2]);
+	i= i+3;
+	output(board[i+0], board[i+1], board[i+2]);
+	i= i+3;
+	output(board[i+0], board[i+1], board[i+2]);
+	output(-1);
+	
+}
+
+int initBoard(board)
+int board[];
+{
+	board[0] = 0;
+	board[1] = 0;
+	board[2] = 0;	
+	board[3] = 0;
+	board[4] = 0;
+	board[5] = 0;
+	board[6] = 0;
+	board[7] = 0;
+	board[8] = 0;
+}
+
+int getInput(x, y)
+int *x,*y;
+{
+	rand(x);
+	*x = random % 3;
+	rand(y);
+	*y = random % 3;
+	output(*x,*y);
+}
+
+main()
+{
+
+  int board[9];
+
+	int x, y;
+	int player1 = 1;
+	int player2 = 2;
+	
+	srand(192093);
+
+	initBoard(board);	
+	printB(board); 
+	
+	getInput(&x,&y);	 
+	move(board, x, y, player1);
+	printB(board);
+	
+	getInput(&x,&y);	
+	move(board, x, y, player2);
+	printB(board);
+
+	getInput(&x,&y);	
+	move(board, x, y, player1);
+	printB(board);
+
+	getInput(&x,&y);	
+	move(board, x, y, player2);
+	printB(board);
+
+}	
+	

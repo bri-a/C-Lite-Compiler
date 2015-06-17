@@ -1,0 +1,19 @@
+
+/* globals around empty functions */
+
+int foo()
+{
+}
+
+int a;
+
+int bar()
+{
+}
+
+int b;
+
+main()
+{
+
+}
